@@ -47,7 +47,6 @@
 			<artifactId>lombok</artifactId>
       <version>1.18.8</version>
 		</dependency>
-
 	</dependencies>
 
 	<profiles>
@@ -68,6 +67,17 @@
             </configuration>
           </plugin>
         </plugins>
+
+        <resources>
+          <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+            <excludes>
+              <exclude>**/*-dev.properties</exclude>
+              <exclude>**/*-prod.properties</exclude>
+            </excludes>
+          </resource>
+        </resources>
       </build>
     </profile>
     <profile>
@@ -84,6 +94,17 @@
           </configuration>
           </plugin>
         </plugins>
+
+        <resources>
+          <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+            <excludes>
+              <exclude>**/*-dev.properties</exclude>
+              <exclude>**/*-prod.properties</exclude>
+            </excludes>
+          </resource>
+        </resources>
       </build>
     </profile>
   </profiles>
