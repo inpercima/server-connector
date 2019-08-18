@@ -45,21 +45,10 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+      <version>1.18.8</version>
 		</dependency>
-	</dependencies>
 
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-        <excludes>
-            <exclude>**/*-dev.properties</exclude>
-            <exclude>**/*-prod.properties</exclude>
-        </excludes>
-      </resource>
-    </resources>
-  </build>
+	</dependencies>
 
 	<profiles>
     <profile>
