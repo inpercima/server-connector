@@ -62,8 +62,8 @@ java -Dspring.profiles.active=prod -jar server-connector-0.0.1-SNAPSHOT.jar
 
 ### General
 
-All options can be overwritten in application-*.properties with prefix `app.`.
-For example the port is default 22 so he do not needs to be overwritten.
+All options can be overridden in application-*.properties with prefix `app.`.
+For example, the port is 22 by default, so it does not need to be overridden.
 
 ### Table of contents
 
