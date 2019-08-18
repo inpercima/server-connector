@@ -12,10 +12,10 @@
 	</parent>
 
 	<groupId>net.inpercima</groupId>
-	<artifactId>minecraft-starter</artifactId>
+	<artifactId>server-connector</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>minecraft-starter</name>
-	<description>Minecraft server starter if it is down.</description>
+	<name>server-connector</name>
+	<description>A very simple ssh server connector to run commands remote.</description>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -47,6 +47,19 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 	</dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <excludes>
+            <exclude>**/*-dev.properties</exclude>
+            <exclude>**/*-prod.properties</exclude>
+        </excludes>
+      </resource>
+    </resources>
+  </build>
 
 	<profiles>
     <profile>
