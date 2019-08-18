@@ -25,6 +25,7 @@ cp src/main/resources/application.properties src/main/resources/application-prod
 
 Update these files for your environment.
 Note: These files will not be under version control and listed in .gitignore.
+Note: These files will not be included in the package.jar.
 
 ## Usage
 
@@ -50,6 +51,8 @@ Note: These files will not be under version control and listed in .gitignore.
 ```
 
 ### Run jar in prodMode
+
+Place the `application-prod.properties` aside the package.jar.
 
 ```bash
 java -Dspring.profiles.active=prod -jar server-connector-0.0.1-SNAPSHOT.jar
