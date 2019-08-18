@@ -28,23 +28,87 @@ Note: These files will not be under version control and listed in .gitignore.
 
 ## Usage
 
-### Run in devMode with real data
+### Run with wrapper in devMode
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-### Run in prodMode with real data
+### Run with wrapper in prodMode
 
 ```bash
 ./mvnw ./mvnw spring-boot:run -Pprod
 ```
 
-### Package in prodMode with real data
+### Package with wrapper in prodMode
 
 ```bash
 ./mvnw clean package -Pprod
 
 # without tests
 ./mvnw clean package -Pprod -DskipTests
+```
+
+### Run jar in prodMode
+
+```bash
+java -Dspring.profiles.active=prod -jar server-connector-0.0.1-SNAPSHOT.jar
+```
+
+## Configuration
+
+### General
+
+All options can be overwritten in application-*.properties with prefix `app.`.
+For example the port is default 22 so he do not needs to be overwritten.
+
+### Table of contents
+
+* [host](#host)
+* [password](#password)
+* [port](#port)
+* [user](#user)
+* [commands](#commands)
+
+### `host`
+
+The host to be connected.
+
+* default: `host`
+* type: `String`
+
+### `password`
+
+The password for the connection.
+
+* default: `password`
+* type: `String`
+
+### `port`
+
+The port for the connection.
+
+* default: `22`
+* type: `Integer`
+
+### `user`
+
+The user for the connection.
+
+* default: `user`
+* type: `String`
+
+### `commands`
+
+The commands to be send and executed on the server.
+This is a list of commands with minimum one command.
+
+* default: `ls`
+* type: `String`
+
+Example:
+
+```bash
+app.commands[0]=cd /home
+app.commands[1]=ls
 ```
