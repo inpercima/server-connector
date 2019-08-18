@@ -19,8 +19,8 @@ cd server-connector
 Create property files for `devMode` and `prodMode`.
 
 ```bash
-cp src/main/resources/application.yml src/main/resources/application-dev.yml
-cp src/main/resources/application.yml src/main/resources/application-prod.yml
+cp src/main/resources/application.properties src/main/resources/application-dev.properties
+cp src/main/resources/application.properties src/main/resources/application-prod.properties
 ```
 
 Update these files for your environment.
