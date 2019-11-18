@@ -1,4 +1,4 @@
-package net.inpercima.minecraftstarter;
+package net.inpercima.serverconnector;
 
 import java.util.List;
 

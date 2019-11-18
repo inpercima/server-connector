@@ -1,4 +1,4 @@
-package net.inpercima.minecraftstarter;
+package net.inpercima.serverconnector;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -18,13 +18,13 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
 @Slf4j
-public class ServerApplication implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
     @Autowired
     private ServerProperties properties;
 
     public static void main(String[] args) {
-        SpringApplication.run(ServerApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Override
