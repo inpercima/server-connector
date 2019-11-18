@@ -60,12 +60,9 @@ cp src/main/resources/application.yml src/main/resources/application-prod.yml
 # package without tests
 ./mvnw clean package -DskipTests
 
-# run
-# place the `application-prod.yml` aside the server-connector.jar.
-java -jar /target/server-connector.jar --spring.profiles.active=prod
-
-# combine package and run
-./mvnw clean package && java -jar /target/server-connector.jar --spring.profiles.active=prod
+cd target
+# place the `application-prod.yml` aside the server-connector.jar and run the jar
+java -jar server-connector.jar --spring.profiles.active=prod
 ```
 
 ## Configuration
