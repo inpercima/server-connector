@@ -19,50 +19,57 @@ cd server-connector
 Create property files for `devMode` and `prodMode`.
 
 ```bash
-cp src/main/resources/application.properties src/main/resources/application-dev.properties
-cp src/main/resources/application.properties src/main/resources/application-prod.properties
+cp src/main/resources/application.yml src/main/resources/application-dev.yml
+cp src/main/resources/application.yml src/main/resources/application-prod.yml
 ```
 
-Update these files for your environment.
-Note: These files will not be under version control and listed in .gitignore.
-Note: These files will not be included in the package.jar.
+**Note**: These files will not be under version control and listed in .gitignore.
+**Note**: These files will not be included in the package.jar.
 
 ## Usage
 
-### Run with wrapper in devMode
+### Run in devMode
 
 ```bash
-./mvnw spring-boot:run
+# short
+./mvnw
+
+# long
+./mvnw spring-boot:run -Pdev
 ```
 
-### Run with wrapper in prodMode
+### Run in prodMode
 
 ```bash
-./mvnw ./mvnw spring-boot:run -Pprod
+# short
+./mvnw -Pprod
+
+# long
+./mvnw spring-boot:run -Pprod
 ```
 
-### Package with wrapper in prodMode
+### Package and run in prodMode
 
 ```bash
-./mvnw clean package -Pprod
+# package
+./mvnw clean package
 
-# without tests
-./mvnw clean package -Pprod -DskipTests
-```
+# package without tests
+./mvnw clean package -DskipTests
 
-### Run jar in prodMode
+# run
+# place the `application-prod.yml` aside the server-connector.jar.
+java -jar /target/server-connector.jar --spring.profiles.active=prod
 
-Place the `application-prod.properties` aside the package.jar.
-
-```bash
-java -Dspring.profiles.active=prod -jar server-connector-0.0.1-SNAPSHOT.jar
+# combine package and run
+./mvnw clean package && java -jar /target/server-connector.jar --spring.profiles.active=prod
 ```
 
 ## Configuration
 
 ### General
 
-All options can be overridden in application-*.properties with prefix `app.`.
+All options can be overridden in application-*.yml with prefix `app.`.
 For example, the port is 22 by default, so it does not need to be overridden.
 
 ### Table of contents
@@ -112,6 +119,8 @@ This is a list of commands with minimum one command.
 Example:
 
 ```bash
-app.commands[0]=cd /home
-app.commands[1]=ls
+app:
+  commands:
+    - cd /home
+    - ls
 ```
