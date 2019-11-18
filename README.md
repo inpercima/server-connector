@@ -1,5 +1,8 @@
 # server-connector
 
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+![Github Action](https://github.com/inpercima/server-connector/workflows/Java%20CI/badge.svg)
+
 A very simple ssh server connector to run commands remote.
 
 ## Prerequisites
