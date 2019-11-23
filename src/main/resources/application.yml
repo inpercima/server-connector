@@ -1,3 +1,11 @@
+#
+# APPLICATION CONFIG
+#
+
+spring:
+  profiles:
+    active: dev
+
 app:
   host: host
   password: password
