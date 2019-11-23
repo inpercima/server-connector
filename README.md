@@ -62,7 +62,7 @@ cp src/main/resources/application.yml src/main/resources/application-prod.yml
 
 cd target
 # place the `application-prod.yml` aside the server-connector.jar and run the jar
-java -jar server-connector.jar --spring.profiles.active=prod
+java -jar server-connector-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
 ```
 
 ## Configuration
