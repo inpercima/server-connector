@@ -9,7 +9,7 @@ A very simple ssh server connector to run commands remote.
 
 ### Java
 
-* `jdk 8` or higher
+* `jdk 16` or higher
 
 ## Getting started
 
@@ -19,15 +19,14 @@ git clone https://github.com/inpercima/server-connector.git
 cd server-connector
 ```
 
-Create property files for `devMode` and `prodMode`.
+Create environment files for `devMode` and `prodMode`.
 
 ```bash
 cp src/main/resources/application.yml src/main/resources/application-dev.yml
 cp src/main/resources/application.yml src/main/resources/application-prod.yml
 ```
 
-**Note**: These files will not be under version control and listed in .gitignore.
-**Note**: These files will not be included in the package.jar.
+**Note**: These files will not be under version control but listed in .gitignore.
 
 ## Usage
 
@@ -60,10 +59,10 @@ cp src/main/resources/application.yml src/main/resources/application-prod.yml
 # package without tests
 ./mvnw clean package -DskipTests
 
-# place the `application-prod.yml` aside the server-connector-0.0.1-SNAPSHOT.jar and run the jar
+# place the `application-prod.yml` aside the server-connector-1.0.0-SNAPSHOT.jar and run the jar
 cp src/main/resources/application-prod.yml target/application-prod.yml
 cd target
-java -jar server-connector-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+java -jar server-connector-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod
 ```
 
 ## Configuration
