@@ -23,5 +23,4 @@ public class ServerProperties {
     private Integer port;
 
     private String user;
-
 }
