@@ -90,6 +90,7 @@ The host to be connected.
 ### `password`
 
 The password for the connection.
+Attention: The password is in plaintext.
 
 * default: `password`
 * type: `String`
