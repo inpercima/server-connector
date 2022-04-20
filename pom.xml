@@ -7,7 +7,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.6.3</version>
+    <version>2.6.6</version>
   </parent>
 
   <artifactId>server-connector</artifactId>
@@ -38,7 +38,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.22</version>
+      <version>1.18.24</version>
     </dependency>
   </dependencies>
 
