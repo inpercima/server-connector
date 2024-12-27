@@ -9,7 +9,7 @@ A very simple ssh server connector to run commands remote.
 
 ### Java
 
-* `jdk 17` or higher
+* `jdk 21` or higher
 
 ## Getting started
 
