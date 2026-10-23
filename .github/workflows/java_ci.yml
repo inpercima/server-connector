@@ -1,0 +1,21 @@
+name: Java CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Set up JDK 25
+      uses: actions/setup-java@v5
+      with:
+        java-version: "25"
+        distribution: "temurin"
+
+    - name: Run maven verify
+      run: ./mvnw verify
