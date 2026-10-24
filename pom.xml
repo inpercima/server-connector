@@ -46,7 +46,7 @@
   </dependencies>
 
   <properties>
-    <lombok.version>1.18.46</lombok.version>
+    <lombok.version>1.18.48</lombok.version>
     <maven.compiler.source>25</maven.compiler.source>
     <maven.compiler.target>25</maven.compiler.target>
     <java.version>25</java.version>
